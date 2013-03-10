@@ -1,0 +1,41 @@
+
+
+##Jquery从头来
+
+例子代码：
+
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+      </head>
+      <body>
+        <a href="http://jquery.com/">Jquery</a>
+        <script src="jquery.js"></script>
+        <script>
+          $(document).ready( function(){
+            $("a").click( function( event ){ alert("As you can see, the link no longer took you to jquery.com!");
+      	 event.preventDefault();
+    });
+
+    });
+        </script>
+      </body>
+    </html>
+
+上述代码是典型的jquery代码，第一行表明html5，第九行显示引用的jquery库的相对位置。
+
+第十行开始显示了一段jquery的代码，$是jquery的缩写，document表明整个页面，ready说明整个页面加载完成。function是此页面加载完成后所要执行的动作。
+
+event.prentDefault表明执行jquery之后不会执行其他的代码。
+
+可以给属性添加或者删除class属性。
+
+    <style>
+      a.test { font-weight : bold: }
+    </style>
+
+执行：
+
+    $("a").addClass( "test" );
